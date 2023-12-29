@@ -21,11 +21,11 @@ const dynamicCounterSlice = createSlice({
             state.count -= action.payload;
         }
     },
-    // extraReducers:(builder)=>{
-    //         builder.addCase(counterActions.increment, (state,action)=>{
-    //             state.count++;
-    //         })
-    //     }
+    extraReducers:(builder)=>{
+            builder.addCase(counterActions.increment, (state,action)=>{
+                state.count++;
+            })
+        }
         // {
         //      ['counter/increment']:(state, action)=>{
         //     state.count++
