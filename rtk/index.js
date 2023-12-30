@@ -1,6 +1,8 @@
 const store = require('./app/store');
 const {counterActions} = require('./features/counter/counterSlice');
 const {dynamicCounterActions} = require('./features/dynamicCounter/dynamicCounterSlice');
+const {fetchPosts} = require('./features/posts/postSlice');
+const {fetchTodos} = require('./features/todos/todoSlice');
 
 
 // initial state
@@ -13,8 +15,11 @@ store.subscribe(()=>{
 
 // dispatch actions
 
+store.dispatch(fetchTodos());
+// store.dispatch(fetchPosts());
+
 // normal counter
-store.dispatch(counterActions.increment());
+// store.dispatch(counterActions.increment());
 // store.dispatch(counterActions.increment());
 // store.dispatch(counterActions.decrement());
 
